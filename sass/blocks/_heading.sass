@@ -1,0 +1,64 @@
+.heading
+  &::before
+    content: ''
+    background-color: $dark
+    position: absolute
+    top: 0
+    left: 0
+    height: 545px
+    width: 100%
+    z-index: -100
+  margin-top: 30px
+  &__area
+    height: 570px
+    border-radius: 10px
+    overflow: hidden
+    display: flex
+    justify-content: space-between
+  &__content
+    padding: 55px
+    width: 100%
+    background: url('../images/content-javascript.jpg') no-repeat center center
+  &__author
+    display: flex
+    align-items: center
+    &-credits
+      max-width: 84px
+      margin-left: 10px
+    &-photo
+      border-radius: 50%
+      object-fit: cover
+    &-name
+      font-size: 14px
+      line-height: 143%
+      color: $light-text
+      opacity: 0.85
+    &-occupation
+      font-size: 12px
+      line-height: 125%
+      color: $light-text
+      opacity: 0.4
+  &__title
+    letter-spacing: 0.5px
+    color: $blue
+    font-weight: 900
+    font-size: 12px
+    line-height: 125%
+    text-transform: uppercase
+    margin-top: 145px
+  &__description
+    color: $light-text
+    font-family: 'Roboto Slab', sans-serif
+    font-weight: bold
+    font-size: 40px
+    line-height: 125%
+    max-width: 416px
+  &__button
+    font-size: 14px
+    line-height: 143%
+    color: $light-text
+    img
+      margin-left: 5px
+  &__tabs
+    background-color: #fff
+    min-width: 263px

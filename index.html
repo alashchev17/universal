@@ -5,12 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Universal - Новостной портал о Frontend разработке</title>
   </head>
   <body>
-    <header class="header header-primary"></header>
-    <section class="main"></section>
+    <header class="header header-primary">
+      <div class="container">
+        <div class="header-wrapper">
+          <a href="/index.html" class="logo header__logo">
+            <img class="logo__image" src="./images/logo--primary.svg" alt="logo" />
+          </a>
+          <nav class="header__nav">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a href="#" class="header__link">Статьи</a></li>
+              <li class="header__menu-item"><a href="#" class="header__link">Новости</a></li>
+              <li class="header__menu-item"><a href="#" class="header__link">Горячее</a></li>
+              <li class="header__menu-item"><a href="#" class="header__link">HTML</a></li>
+              <li class="header__menu-item"><a href="#" class="header__link">CSS</a></li>
+              <li class="header__menu-item"><a href="#" class="header__link">JavaScript</a></li>
+              <li class="header__menu-item"><a href="#" class="header__link">Web Design</a></li>
+            </ul>
+          </nav>
+          <button class="header__button">Оставить заявку</button>
+        </div>
+        <!-- /.header-wrapper -->
+      </div>
+      <!-- /.container -->
+    </header>
+    <section class="heading">
+      <div class="container">
+        <div class="heading__area">
+          <!-- Разделяет область контентной части и табов -->
+          <div class="heading__content">
+            <div class="heading__author">
+              <img
+                class="heading__author-photo"
+                src="./images/heading-avatar.png"
+                alt="Photo: Давид Гуров, разработчик"
+              />
+              <div class="heading__author-credits">
+                <span class="heading__author-name">Давид Гуров</span>
+                <span class="heading__author-occupation">Разработчик</span>
+              </div>
+            </div>
+            <!-- /.heading__author -->
+            <h3 class="heading__title">JavaScript</h3>
+            <p class="heading__description">Расширение Chrome защищает от атак</p>
+            <a href="#" class="button heading__button"
+              >Читать далее
+              <img src="./images/arrow.svg" alt="Icon: arrow" />
+            </a>
+          </div>
+          <!-- /.heading__content -->
+          <div class="heading__tabs">123</div>
+          <!-- /.heading__tabs -->
+        </div>
+        <!-- /.heading__area -->
+      </div>
+      <!-- /.container -->
+    </section>
+
+    <script src="./scripts/jquery-3.6.0.min.js"></script>
+
+    <script src="./scripts/main.js"></script>
   </body>
 </html>

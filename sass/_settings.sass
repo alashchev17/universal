@@ -1,10 +1,45 @@
+// font-family: 'Lato', sans-serif;
+// font-family: 'Roboto Slab', serif;
+@font-face
+  font-family: 'Lato'
+  src: url('../fonts/Lato-Regular.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+@font-face
+  font-family: 'Lato'
+  src: url('../fonts/Lato-Heavy.woff') format('woff')
+  font-weight: 900
+  font-style: normal
+  font-display: swap
+@font-face
+  font-family: 'Lato Heavy Italic'
+  src: url('../fonts/Lato-HeavyItalic.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+  font-display: swap
 *, *::before, *::after
   box-sizing: border-box
 body
   margin: 0
   padding: 0
-  background-color: #EDEFF0
+  background-color: $light-bg
   font-family: 'Lato', sans-serif
 .container
   max-width: 1140px
   margin: auto
+a
+  text-decoration: none
+  color: inherit
+button
+  border: none
+  outline: none
+  color: inherit
+  cursor: pointer
+.button
+  background-color: $blue
+  padding: 10px 20px
+  border-radius: 20px
+  display: inline-flex
+  align-items: center
+  font-weight: 900
