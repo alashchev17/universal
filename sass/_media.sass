@@ -1,0 +1,168 @@
+@media screen and ( max-width: 1200px )
+  .container
+    max-width: 970px
+    padding: 0 15px
+  .header
+    &-wrapper
+      justify-content: space-between
+    &__logo
+      margin-right: 0
+    &__nav
+      margin-right: 0
+    &__button
+      width: unset
+      padding: 10px 25px
+@media screen and ( max-width: 992px )
+  .header
+    &-wrapper
+      justify-content: unset
+    &__logo
+      margin-right: auto
+    &__nav
+      display: none
+    &__button
+      margin-right: 50px
+    &__mobile
+      &-button
+        display: flex
+        position: relative
+        z-index: 1000
+        flex-direction: column
+        justify-content: space-between
+        background: none
+        padding: 0
+  .mobile
+    &-button
+      transition: 0.3s ease
+      &--active
+        position: fixed
+        top: 37px
+        right: 15px
+        .mobile-button__item
+          background-color: $dark
+          &:not(:last-child)
+            margin-bottom: 0
+          &:nth-child(2)
+            display: none
+          &:nth-child(1)
+            transform: rotate(45deg)
+          &:nth-child(3)
+            transform: rotate(-45deg) translate(1px, 0px)
+      &__item
+        width: 20px
+        height: 1px
+        background-color: $light-bg
+        transition: 0.3s ease
+        &:not(:last-child)
+          margin-bottom: 5px
+    &-menu
+      &--active
+        display: block
+        background-color: $light-bg
+        position: fixed
+        z-index: 999
+        top: 0
+        right: 0
+        width: 100%
+        height: 100vh
+        text-align: center
+        overflow: auto
+      &__list
+        list-style: none
+        margin: 0
+        padding: 0
+        display: flex
+        flex-direction: column
+        height: 100%
+      &__item
+        &:first-child
+          margin-top: 40px
+        &:not(:last-child)
+          margin-bottom: 40px
+      &__link
+        color: $dark
+      
+  .heading
+    &__area
+      flex-direction: column
+      height: unset
+    &__tabs
+      max-width: 100%
+    &__title
+      margin-top: 30px
+    &__content
+      min-height: unset
+      padding: 30px 50px
+    &__description
+      br
+        display: none
+@media screen and ( max-width: 520px )
+  .header
+    &__button
+      font-size: 11px
+      margin-right: 10px
+  .heading
+    &__title
+      font-size: 10px
+    &__description
+      font-size: 22px
+    &__button
+      font-size: 12px
+  .content
+    &__author
+      &-photo
+        width: 35px
+        height: 35px
+      &-name
+        font-size: 12px
+      &-occupation
+        font-size: 10px
+@media screen and ( max-width: 400px )
+  .header
+    &__button
+      display: none
+  .heading
+    &__content
+      padding: 15px
+    &__title
+      margin-top: 15px
+      font-size: 8px
+    &__description
+      font-size: 14px
+      margin: 0 0 20px
+    &__button
+      font-size: 10px
+@media screen and ( min-width: 992px )
+  .header
+    &__link
+      position: relative
+      transition: 0.3s ease
+      &::after
+        content: ''
+        position: absolute
+        bottom: -10px
+        left: 0
+        width: 100%
+        height: 2px
+        background-color: $light-text
+        border-radius: 3px
+        transition: 0.3s ease
+        transform: scaleX(0)
+      &:hover
+        &::after
+          transform: scaleX(100%)
+    &__button
+      transition: 0.3s ease
+      &:hover
+        background-color: darken($dark-btn, 10%)
+  .heading
+    &__tabs
+      &-item
+        transition: 0.3s ease
+        &:hover
+          background-color: #f5f5f5
+  .button
+    outline: none
+    transition: 0.3s ease
+    &:hover
+      background-color: darken($blue, 10%)
