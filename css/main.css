@@ -1329,7 +1329,7 @@ button {
   .heading__button {
     font-size: 10px; } }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 945px) {
   .header__link {
     position: relative;
     transition: 0.3s ease; }
