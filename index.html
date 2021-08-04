@@ -39,28 +39,145 @@
       <div class="container">
         <div class="heading__area">
           <!-- Разделяет область контентной части и табов -->
-          <div class="heading__content">
-            <div class="heading__author">
-              <img
-                class="heading__author-photo"
-                src="./images/heading-avatar.png"
-                alt="Photo: Давид Гуров, разработчик"
-              />
-              <div class="heading__author-credits">
-                <span class="heading__author-name">Давид Гуров</span>
-                <span class="heading__author-occupation">Разработчик</span>
+          <div class="heading__content content">
+            <div id="content-1" class="content__item">
+              <img class="content__image" src="./images/content-cssfloat.jpg" alt="Photo: CSS Float" />
+              <div class="content__author">
+                <img
+                  class="content__author-photo"
+                  src="./images/heading-avatar-1.jpg"
+                  alt="Photo: Николай Нишикинов, разработчик"
+                />
+                <div class="content__author-credits">
+                  <span class="content__author-name">Николай Нишикинов</span>
+                  <span class="content__author-occupation">Верстальщик</span>
+                </div>
               </div>
+              <!-- /.content__author -->
+              <h3 class="heading__title">CSS</h3>
+              <p class="heading__description">Как использовать CSS float после того, как вышел Flexbox</p>
+              <a href="#" class="button heading__button"
+                >Читать далее
+                <img src="./images/arrow.svg" alt="Icon: arrow" />
+              </a>
             </div>
-            <!-- /.heading__author -->
-            <h3 class="heading__title">JavaScript</h3>
-            <p class="heading__description">Расширение Chrome защищает от атак</p>
-            <a href="#" class="button heading__button"
-              >Читать далее
-              <img src="./images/arrow.svg" alt="Icon: arrow" />
-            </a>
+            <div id="content-2" class="content__item content__item--active">
+              <img class="content__image" src="./images/content-javascript.jpg" alt="Photo: JavaScript" />
+              <div class="content__author">
+                <img
+                  class="content__author-photo"
+                  src="./images/heading-avatar-2.png"
+                  alt="Photo: Давид Гуров, разработчик"
+                />
+                <div class="content__author-credits">
+                  <span class="content__author-name">Давид Гуров</span>
+                  <span class="content__author-occupation">Разработчик</span>
+                </div>
+              </div>
+              <!-- /.content__author -->
+              <h3 class="heading__title">JavaScript</h3>
+              <p class="heading__description">На каком стандарте писать скрипты, если я фрилансер</p>
+              <a href="#" class="button heading__button"
+                >Читать далее
+                <img src="./images/arrow.svg" alt="Icon: arrow" />
+              </a>
+            </div>
+            <div id="content-3" class="content__item">
+              <img class="content__image" src="./images/content-html.jpg" alt="Photo: Retina Display" />
+              <div class="content__author">
+                <img
+                  class="content__author-photo"
+                  src="./images/heading-avatar-3.jpg"
+                  alt="Photo: Наталья Гусова, веб-дизайнер"
+                />
+                <div class="content__author-credits">
+                  <span class="content__author-name">Наталья Гусова</span>
+                  <span class="content__author-occupation">Веб-дизайнер</span>
+                </div>
+              </div>
+              <!-- /.content__author -->
+              <h3 class="heading__title">HTML</h3>
+              <p class="heading__description">Правильно вставляем картинку на сайт для Retina дисплея</p>
+              <a href="#" class="button heading__button"
+                >Читать далее
+                <img src="./images/arrow.svg" alt="Icon: arrow" />
+              </a>
+            </div>
+            <div id="content-4" class="content__item">
+              <img class="content__image" src="./images/content-figma.png" alt="Photo: Web-Design" />
+              <div class="content__author">
+                <img
+                  class="content__author-photo"
+                  src="./images/heading-avatar-4.jpg"
+                  alt="Photo: Константин Юдин, веб-дизайнер"
+                />
+                <div class="content__author-credits">
+                  <span class="content__author-name">Константин Юдин</span>
+                  <span class="content__author-occupation">Веб-дизайнер</span>
+                </div>
+              </div>
+              <!-- /.content__author -->
+              <h3 class="heading__title">Web-Design</h3>
+              <p class="heading__description">
+                ТОП-10 плагинов для<br />
+                Figma
+              </p>
+              <a href="#" class="button heading__button"
+                >Читать далее
+                <img src="./images/arrow.svg" alt="Icon: arrow" />
+              </a>
+            </div>
+            <div id="content-5" class="content__item">
+              <img class="content__image" src="./images/content-cssgrid.jpg" alt="Photo: JavaScript" />
+              <div class="content__author">
+                <img
+                  class="content__author-photo"
+                  src="./images/heading-avatar-5.jpg"
+                  alt="Photo: Давид Гуров, разработчик"
+                />
+                <div class="content__author-credits">
+                  <span class="content__author-name">Пётр Зойчевич</span>
+                  <span class="content__author-occupation">Разработчик веб-приложений</span>
+                </div>
+              </div>
+              <!-- /.content__author -->
+              <h3 class="heading__title">CSS</h3>
+              <p class="heading__description">Возможности CSS Grid Layout, которые уже можно применять</p>
+              <a href="#" class="button heading__button"
+                >Читать далее
+                <img src="./images/arrow.svg" alt="Icon: arrow" />
+              </a>
+            </div>
           </div>
           <!-- /.heading__content -->
-          <div class="heading__tabs">123</div>
+          <div class="heading__tabs">
+            <h3 class="heading__tabs-title">Рекомендуем</h3>
+            <div data-target="#content-1" class="heading__tabs-item">
+              <h4 class="heading__tabs-subtitle">CSS</h4>
+              <p class="heading__tabs-text">Как использовать CSS float после того, как вышел Flexbox</p>
+            </div>
+            <!-- /.heading__tabs-item -->
+            <div data-target="#content-2" class="heading__tabs-item heading__tabs-item--active">
+              <h4 class="heading__tabs-subtitle">JavaScript</h4>
+              <p class="heading__tabs-text">На каком стандарте писать скрипты, если я фрилансер</p>
+            </div>
+            <!-- /.heading__tabs-item -->
+            <div data-target="#content-3" class="heading__tabs-item">
+              <h4 class="heading__tabs-subtitle">HTML</h4>
+              <p class="heading__tabs-text">Правильно вставляем картинку на сайт для Retina дисплея</p>
+            </div>
+            <!-- /.heading__tabs-item -->
+            <div data-target="#content-4" class="heading__tabs-item">
+              <h4 class="heading__tabs-subtitle">Web design</h4>
+              <p class="heading__tabs-text">ТОП-10 плагинов для Figma</p>
+            </div>
+            <!-- /.heading__tabs-item -->
+            <div data-target="#content-5" class="heading__tabs-item">
+              <h4 class="heading__tabs-subtitle">CSS</h4>
+              <p class="heading__tabs-text">Возможности CSS Grid Layout , которые уже можно применять</p>
+            </div>
+            <!-- /.heading__tabs-item -->
+          </div>
           <!-- /.heading__tabs -->
         </div>
         <!-- /.heading__area -->
