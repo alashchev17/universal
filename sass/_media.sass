@@ -12,6 +12,35 @@
     &__button
       width: unset
       padding: 10px 25px
+  .articles
+    &__hot
+      margin-bottom: 15px
+    &__grid
+      grid-template-columns: repeat(3, 1fr )
+      grid-template-rows: repeat(5,175px)
+      width: 100%
+    &__item
+      &:nth-child(3)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 5
+        grid-row-end: 6
+      &:nth-child(4)
+        grid-column-start: 2
+        grid-column-end: 3
+        grid-row-start: 5
+        grid-row-end: 6
+      &:nth-child(10)
+        grid-column-start: 3
+        grid-column-end: 4
+        grid-row-start: 5
+        grid-row-end: 6
+  .dream
+    max-width: 100%
+  .popular
+    max-width: 100%
+  .tags
+    overflow: auto
 @media screen and ( max-width: 992px )
   .header
     &-wrapper
@@ -96,7 +125,135 @@
     &__description
       br
         display: none
-@media screen and ( max-width: 520px )
+  .hot
+    justify-content: space-around
+    flex-wrap: wrap
+    row-gap: 25px
+    &__link
+      flex-basis: 50%
+      &:nth-child(even)
+        padding-right: 25px
+      &:nth-child(odd)
+        padding-left: 0
+  .dream
+    &__title
+      font-size: 22px
+      line-height: 28px
+    &__image
+      max-width: 250px
+    &__username
+      display: flex
+      flex-wrap: wrap
+    &__comment
+      flex-basis: 100%
+  .download
+    &__info
+      padding-top: 18px
+      padding-bottom: 0
+  .articles
+    &__title
+      font-size: 14px
+      margin-bottom: 10px
+      &--big
+        padding-right: 40px
+    &__text
+      font-size: 12px
+    &__item
+      &:nth-child(n+6):nth-child(-n+9)
+        padding: 20px 20px 25px
+@media screen and ( max-width: 768px )
+  .articles
+    &__title
+      font-size: 13px
+      line-height: 18px
+      &--big
+        padding: 25px 20px
+    &__image
+      height: 260px
+    &__text
+      font-size: 11px
+      line-height: 16px
+    &__date
+      bottom: 15px
+      left: 15px
+    &__grid
+      grid-gap: 15px
+      grid-template-columns: repeat(3, 1fr )
+      grid-template-rows: repeat(6, 170px)
+    &__item
+      &:nth-child(n+6):nth-child(-n+9)
+        padding: 15px
+      &:nth-child(1)
+        grid-column: 1 / 4
+        grid-row-start: 1
+        grid-row-end: 3
+      &:nth-child(2)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 3
+        grid-row-end: 5
+      &:nth-child(3)
+        grid-column-start: 2
+        grid-column-end: 3
+        grid-row-start: 6
+        grid-row-end: 7
+      &:nth-child(4)
+        grid-column-start: 2
+        grid-column-end: 4
+        grid-row-start: 5
+        grid-row-end: 6
+      &:nth-child(5)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 5
+        grid-row-end: 7
+      &:nth-child(10)
+        grid-column-start: 3
+        grid-column-end: 4
+        grid-row-start: 6
+        grid-row-end: 7
+  .popular
+    padding: 19px 18px 20px
+    &__subtitle
+      font-size: 14px
+      line-height: 20px
+    &__avatar
+      margin-right: 5px
+    &__username
+      font-size: 12px
+      line-height: 16px
+    &__data
+      flex-wrap: wrap
+    &__date
+      flex-basis: 100%
+      margin-bottom: 5px
+  .tags
+    &__title
+      padding: 15px 20px
+    &-wrapper
+      padding: 15px 0 15px 20px
+    &__item
+      font-size: 12px
+      line-height: 18px
+  .download
+    &__info
+      padding-left: 20px
+    &__title
+      font-size: 14px
+      line-height: 20px
+    &__image
+      top: 15px
+      right: 10px
+  .social
+    &__title
+      font-size: 16px
+      margin-bottom: 18px
+    &__link
+      width: 35px
+    &__icon
+      width: 100%
+  
+@media screen and ( max-width: 576px )
   .header
     &__button
       font-size: 11px
@@ -117,6 +274,131 @@
         font-size: 12px
       &-occupation
         font-size: 10px
+  .hot
+    padding: 20px 15px
+    &__link
+      &:nth-child(even)
+        padding-left: 15px
+        padding-right: 15px
+      &:nth-child(odd)
+        padding-left: 0
+        padding-right: 15px
+    &__text
+      font-size: 12px
+      line-height: 18px
+    &__image
+      width: 50px
+      height: 50px
+      margin-left: 10px
+  .articles
+    &__grid
+      grid-template-columns: repeat(2, 1fr )
+      grid-template-rows: repeat(7, 170px)
+    &__item
+      &:nth-child(1)
+        grid-column: 1 / 3
+        grid-row-start: 1
+        grid-row-end: 3
+      &:nth-child(2)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 3
+        grid-row-end: 5
+      &:nth-child(3)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 8
+        grid-row-end: 9
+      &:nth-child(4)
+        grid-column-start: 2
+        grid-column-end: 3
+        grid-row-start: 6
+        grid-row-end: 8
+      &:nth-child(5)
+        grid-column-start: 2
+        grid-column-end: 3
+        grid-row-start: 3
+        grid-row-end: 5
+      &:nth-child(10)
+        grid-column-start: 2
+        grid-column-end: 3
+        grid-row-start: 8
+        grid-row-end: 9
+  .dream
+    &__top
+      padding-left: 20px
+    &__bottom
+      padding-left: 20px
+    &__title
+      font-size: 16px
+      line-height: 24px
+    &__description
+      font-size: 12px
+    &__image
+      max-width: 190px
+@media screen and ( max-width: 435px )
+  .hot
+    &__text
+      font-size: 14px
+    &__link
+      flex-basis: 100%
+      &:nth-child(even)
+        padding-left: 0
+  .dream
+    &__image
+      display: none
+  .articles
+    &__title
+      font-size: 16px
+      line-height: 25px
+      &--big
+        max-width: 80%
+    &__text
+      font-size: 14px
+      line-height: 20px
+      max-width: 80%
+    &__grid
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(13, 170px)
+    &__item
+      &:nth-child(1)
+        grid-column: 1 / 2
+        grid-row-start: 1
+        grid-row-end: 3
+      &:nth-child(2)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 3
+        grid-row-end: 5
+      &:nth-child(3)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 5
+        grid-row-end: 6
+      &:nth-child(4)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 8
+        grid-row-end: 9
+      &:nth-child(5)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 6
+        grid-row-end: 8
+      &:nth-child(10)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 13
+        grid-row-end: 14
+  .download
+    &__title
+      max-width: 70%
+  .social
+    &__title
+      font-size: 20px
+    &__link
+      width: 50px
+  
 @media screen and ( max-width: 400px )
   .header
     &__button
@@ -166,3 +448,29 @@
     transition: 0.3s ease
     &:hover
       background-color: darken($blue, 10%)
+  .hot
+    &__link
+      &:hover
+        &::before
+          opacity: 0.5
+  .articles
+    &__item
+      &--link
+        &:hover
+          &::before
+            opacity: 0.5
+  .download
+    &__button
+      &:hover
+        &::before
+          opacity: 0.8
+  .tags
+    &__item
+      &:hover
+        &::before
+          opacity: 0.5
+  .social
+    &__link
+      &:hover
+        &::before
+          opacity: 0.5
