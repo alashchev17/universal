@@ -126,9 +126,6 @@
       br
         display: none
   .hot
-    justify-content: space-around
-    flex-wrap: wrap
-    row-gap: 25px
     &__link
       flex-basis: 50%
       &:nth-child(even)
@@ -161,6 +158,11 @@
     &__item
       &:nth-child(n+6):nth-child(-n+9)
         padding: 20px 20px 25px
+@media screen and ( max-width: 930px )
+  .hot
+    justify-content: space-around
+    flex-wrap: wrap
+    row-gap: 25px
 @media screen and ( max-width: 768px )
   .articles
     &__title
@@ -414,7 +416,7 @@
       margin: 0 0 20px
     &__button
       font-size: 10px
-@media screen and ( min-width: 945px )
+@media screen and ( min-width: 992px )
   .header
     &__link
       position: relative
