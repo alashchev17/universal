@@ -48,6 +48,16 @@
       &__title
         font-size: 18px
         line-height: 23px
+  .career
+    &-card
+      &:nth-child(n+3)
+        padding: 20px 15px 25px
+      &--big
+        padding-right: 200px
+      &__title
+        &-small
+          font-size: 14px
+          line-height: 25px
 @media screen and ( max-width: 992px )
   .header
     &-wrapper
@@ -200,6 +210,74 @@
       &__text
         font-size: 12px
         line-height: 16px
+  .career
+    &-wrapper
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: repeat(4, 170px)
+    &-card
+      &:nth-child(1)
+        grid-column: 1 / 4
+        grid-row: 1 / 3
+      &:nth-child(2)
+        grid-column: 1 / 3
+        grid-row: 3 / 5
+      &:nth-child(3)
+        grid-column: 3 / 4
+        grid-row: 3 / 4
+      &:nth-child(4)
+        grid-column: 3 / 4
+        grid-row: 4 / 5
+  .choice
+    &-wrapper
+      padding: 20px
+    &__user
+      margin-bottom: 10px
+    &__slide
+      max-width: 978px
+      height: 370px
+    &__title
+      font-size: 36px
+      line-height: 48px
+    &__pagination
+      margin-bottom: 20px
+  .subscribe
+    padding: 40px 0
+    &__title
+      font-size: 32px
+      line-height: 40px
+  .footer
+    &-top
+      flex-wrap: wrap
+      padding-bottom: 24px
+      &__list
+        padding-top: 20px
+        margin-bottom: 20px
+        &:nth-child(n)
+          width: 33.3%
+      &__title
+        margin-bottom: 15px
+      &__item
+        margin-bottom: 10px
+    &-middle
+      &__logo
+        width: 35px
+        height: 35px
+      &__item
+        font-size: 12px
+        line-height: 16px
+        margin-left: 20px
+      &__social
+        &-link
+          &:not(:last-child)
+            margin-right: 10px
+        &-image
+          width: 30px
+          height: 30px
+    &-bottom
+      padding: 25px 0 35px
+      font-size: 12px
+      &__text
+        max-width: 550px
 @media screen and ( max-width: 930px )
   .hot
     justify-content: space-around
@@ -329,7 +407,50 @@
       &__image
         width: 42%
         height: 160px
-  
+  .career
+    padding: 30px 0
+    &-wrapper
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(5, 170px)
+    &-card
+      &:nth-child(1)
+        grid-column: 1 / 3
+        grid-row: 1 / 3
+      &:nth-child(2)
+        grid-column: 1 / 3
+        grid-row: 3 / 5
+      &:nth-child(3)
+        grid-column: 1 / 2
+        grid-row: 5 / 6
+      &:nth-child(4)
+        grid-column: 2 /3
+        grid-row: 5 / 6
+      &--big
+        padding-right: 250px
+  .choice
+    &__title
+      font-size: 25px
+      line-height: 32px
+      margin-bottom: 60px
+    &__pagination
+      margin-bottom: 20px
+  .subscribe
+    &__title
+      font-size: 25px
+      line-height: 32px
+    &_button
+      padding: 8px 20px
+      font-size: 12px
+      line-height: 18px
+  .footer
+    &-middle
+      flex-wrap: wrap
+      &__social
+        margin-top: 20px
+    &-bottom
+      flex-wrap: wrap
+      &__text
+        margin-bottom: 20px
 @media screen and ( max-width: 576px )
   .header
     &__button
@@ -420,6 +541,45 @@
         height: 150px
       &__info
         width: 58%
+  .career
+    &-card
+      &--big
+        padding-right: 180px
+        &::before
+          background-position: 30% center
+        &::after
+          width: 220px
+          height: 220px
+  .subscribe
+    &__title
+      font-size: 18px
+      line-height: 25px
+    &__form
+      flex-direction: column
+      justify-content: center
+    &__input
+      width: 300px
+      margin: 0 0 15px
+  .footer
+    &-top
+      &__list
+        &:nth-child(n)
+          width: 50%
+    &-middle
+      flex-direction: column
+      align-items: center
+      &__logo
+        width: 50px
+        height: 50px
+        margin: 0 0 15px
+      &__navbar
+        flex-direction: column
+        align-items: center
+        margin-right: 0
+      &__item
+        margin: 0 0 10px
+      &__social
+        margin-top: 10px
 @media screen and ( max-width: 480px )
   .news
     &-item
@@ -433,6 +593,29 @@
         width: 100%
       &__bookmark
         top: 260px
+  .choice
+    &__title
+      font-size: 18px
+      line-height: 24px
+  .career
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(6, 170px)
+    &-card
+      &--big
+        padding: 25px 160px 25px 25px
+      &:nth-child(1)
+        grid-column: 1 / 2
+        grid-row: 1 / 3
+      &:nth-child(2)
+        grid-column: 1 / 2
+        grid-row: 3 / 5
+      &:nth-child(3)
+        grid-column: 1 / 2
+        grid-row: 5 / 6
+      &:nth-child(4)
+        grid-column: 1 / 2
+        grid-row: 6 / 7
   
 @media screen and ( max-width: 435px )
   .hot
@@ -500,7 +683,9 @@
     &__title
       font-size: 20px
       line-height: 30px
-  
+  .subscribe
+    &__title
+      font-size: 14px
 @media screen and ( max-width: 400px )
   .header
     &__button
@@ -522,6 +707,10 @@
         height: 180px
       &__bookmark
         top: 210px
+  .career
+    &-card
+      &--big
+        padding-right: 80px
 @media screen and ( min-width: 992px )
   .header
     &__link
@@ -590,3 +779,22 @@
       &__read-more
         &:hover
           text-decoration: underline
+  .career
+    &-card
+      &--link
+        &:hover
+          &::before
+            opacity: 0.5
+  .footer
+    &-top
+      &__link
+        &:hover
+          text-decoration: underline
+    &-middle
+      &__link
+        &:hover
+          text-decoration: underline
+      &__social-link
+        &:hover
+          &::before
+            opacity: 0.5

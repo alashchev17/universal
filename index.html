@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Universal - Новостной портал о Frontend разработке</title>
   </head>
@@ -18,15 +19,15 @@
           <a href="/index.html" class="logo header__logo">
             <img class="logo__image" src="./images/logo--primary.svg" alt="logo" />
           </a>
-          <nav class="header__nav">
+          <nav class="header__nav" id="navbar">
             <ul class="header__menu-list">
-              <li class="header__menu-item"><a href="#" class="header__link">Статьи</a></li>
-              <li class="header__menu-item"><a href="#" class="header__link">Новости</a></li>
-              <li class="header__menu-item"><a href="#" class="header__link">Горячее</a></li>
-              <li class="header__menu-item"><a href="#" class="header__link">HTML</a></li>
-              <li class="header__menu-item"><a href="#" class="header__link">CSS</a></li>
-              <li class="header__menu-item"><a href="#" class="header__link">JavaScript</a></li>
-              <li class="header__menu-item"><a href="#" class="header__link">Web Design</a></li>
+              <li class="header__menu-item"><a href="#articles" class="header__link">Статьи</a></li>
+              <li class="header__menu-item"><a href="#news" class="header__link">Новости</a></li>
+              <li class="header__menu-item"><a href="#hot" class="header__link">Горячее</a></li>
+              <li class="header__menu-item"><a href="#footer" class="header__link">HTML</a></li>
+              <li class="header__menu-item"><a href="#footer" class="header__link">CSS</a></li>
+              <li class="header__menu-item"><a href="#footer" class="header__link">JavaScript</a></li>
+              <li class="header__menu-item"><a href="#footer" class="header__link">Web Design</a></li>
             </ul>
           </nav>
           <button class="header__button">Оставить заявку</button>
@@ -74,7 +75,7 @@
               <p class="heading__description">Как использовать CSS float после того, как вышел Flexbox</p>
               <a href="news.html" class="button heading__button"
                 >Читать далее
-                <img src="./images/icons/Arrow.svg" alt="Icon: arrow" />
+                <img src="./images/icons/arrow.svg" alt="Icon: arrow" />
               </a>
             </div>
             <div id="content-2" class="content__item content__item--active">
@@ -95,7 +96,7 @@
               <p class="heading__description">На каком стандарте писать скрипты, если я фрилансер</p>
               <a href="news.html" class="button heading__button"
                 >Читать далее
-                <img src="./images/icons/Arrow.svg" alt="Icon: arrow" />
+                <img src="./images/icons/arrow.svg" alt="Icon: arrow" />
               </a>
             </div>
             <div id="content-3" class="content__item">
@@ -116,7 +117,7 @@
               <p class="heading__description">Правильно вставляем картинку на сайт для Retina дисплея</p>
               <a href="news.html" class="button heading__button"
                 >Читать далее
-                <img src="./images/icons/Arrow.svg" alt="Icon: arrow" />
+                <img src="./images/icons/arrow.svg" alt="Icon: arrow" />
               </a>
             </div>
             <div id="content-4" class="content__item">
@@ -140,7 +141,7 @@
               </p>
               <a href="news.html" class="button heading__button"
                 >Читать далее
-                <img src="./images/icons/Arrow.svg" alt="Icon: arrow" />
+                <img src="./images/icons/arrow.svg" alt="Icon: arrow" />
               </a>
             </div>
             <div id="content-5" class="content__item">
@@ -161,7 +162,7 @@
               <p class="heading__description">Возможности CSS Grid Layout, которые уже можно применять</p>
               <a href="news.html" class="button heading__button"
                 >Читать далее
-                <img src="./images/icons/Arrow.svg" alt="Icon: arrow" />
+                <img src="./images/icons/arrow.svg" alt="Icon: arrow" />
               </a>
             </div>
           </div>
@@ -669,9 +670,268 @@
       </div>
       <!-- /.container -->
     </section>
+    <section class="career">
+      <div class="container">
+        <div class="career-wrapper">
+          <div class="career-card choice">
+            <!-- Slider main container -->
+            <div class="swiper-container career-swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide choice__slide">
+                  <img src="./images/career/slider-1.jpg" alt="" class="choice__image" />
+                </div>
+                <!-- /.swiper-slide -->
+                <div class="swiper-slide choice__slide">
+                  <img src="./images/career/slider-2.jpg" alt="" class="choice__image" />
+                </div>
+                <!-- /.swiper-slide -->
+                <div class="swiper-slide choice__slide">
+                  <img src="./images/career/slider-3.jpg" alt="" class="choice__image" />
+                </div>
+                <!-- /.swiper-slide -->
+                <div class="swiper-slide choice__slide">
+                  <img src="./images/career/slider-4.jpg" alt="" class="choice__image" />
+                </div>
+                <!-- /.swiper-slide -->
+                <div class="swiper-slide choice__slide">
+                  <img src="./images/career/slider-5.jpg" alt="" class="choice__image" />
+                </div>
+                <!-- /.swiper-slide -->
+              </div>
+              <!-- If we need pagination -->
+            </div>
+            <!-- /.swiper-container -->
+            <div class="choice-wrapper">
+              <span class="choice__label">Горячее</span>
+              <a href="#" class="choice__user">
+                <img src="./images/career/avatar.png" alt="Оксана Пушкина" class="choice__avatar" />
+                <span class="choice__username">Оксана Пушкина</span>
+                <span class="choice__info">фотограф</span>
+              </a>
+              <h2 class="choice__title">Выбор читателей: где удобнее работать фрилансеру</h2>
+              <a href="news.html" class="button choice__button">
+                <img src="./images/icons/Images.svg" alt="icon:image" class="choice__icon" />
+                Cмотреть фото
+                <span class="choice__count">26</span>
+              </a>
+              <div class="swiper-pagination choice__pagination"></div>
+              <!-- If we need navigation buttons -->
+            </div>
+            <!-- /.choice-wrapper -->
+          </div>
+          <!-- /.choice -->
+          <div class="career-card career-card--big">
+            <h2 class="career-card__title">карьера</h2>
+            <h3 class="career-card__subtitle">Вопросы на собеседовании для джуна</h3>
+            <p class="career-card__text career-card__text--big">
+              Каверзные и не очень вопросы, которых боятся новички, когда идут на собеседование
+            </p>
+            <a href="news.html" class="button career-card__button">
+              Читать далее
+              <img src="./images/icons/Arrow.svg" alt="icon:arrow" class="career-card__icon" />
+            </a>
+          </div>
+          <!-- /.career-card -->
+          <a href="#" class="career-card career-card--link">
+            <h2 class="career-card__title-small">Зарядка для глаз</h2>
+            <p class="career-card__text career-card__text--small">
+              Эти несколько упражнений помогут сохранить зрение. Можно делать их даже если...
+            </p>
+            <span class="career-card__date">15 октября </span>
+          </a>
+          <a href="#" class="career-card career-card--link">
+            <h2 class="career-card__title-small">Топ плагинов jQuery</h2>
+            <p class="career-card__text career-card__text--small">
+              Какие плагины помогут быстро создать галерею, выпадающие списки или окна
+            </p>
+            <span class="career-card__date">14 октября </span>
+          </a>
+        </div>
+        <!-- /.career-wrapper -->
+      </div>
+      <!-- /.container -->
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__subscribe subscribe">
+          <h2 class="subscribe__title">Подпишитесь на нашу рассылку</h2>
+          <form action="send.php" method="POST" class="subscribe__form form" novalidate="novalidate">
+            <div class="subscribe__form-item">
+              <input name="email" type="email" class="subscribe__input" placeholder="Email" required="" />
+            </div>
+            <button type="submit" class="button subscribe__button">Подписаться</button>
+          </form>
+        </div>
+        <!-- /.subscribe -->
+        <div class="footer-top">
+          <div class="footer-top__list">
+            <h3 class="footer-top__title">Новости</h3>
+            <ul class="footer-top__ul">
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Обновления</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Экспресс</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Politics</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Solar Eclipse</a>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-top__list -->
+          <div class="footer-top__list">
+            <h3 class="footer-top__title">Статьи</h3>
+            <ul class="footer-top__ul">
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">HTML</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">CSS</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">JavaScript</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Web Design</a>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-top__list -->
+          <div class="footer-top__list">
+            <h3 class="footer-top__title">Видеоуроки</h3>
+            <ul class="footer-top__ul">
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Скринкасты</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Уроки</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Вебинары</a>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-top__list -->
+          <div class="footer-top__list">
+            <h3 class="footer-top__title">Курсы</h3>
+            <ul class="footer-top__ul">
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Платные интенсивы</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Бесплатные стримы</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Мастер-классы</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link"> Менторство</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link"> Буткемпы </a>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-top__list -->
+          <div class="footer-top__list">
+            <h3 class="footer-top__title">Информация</h3>
+            <ul class="footer-top__ul">
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link"> Политика данных</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link">Оферта сайта</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link">Реквизиты</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link"> Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-top__list -->
+          <div class="footer-top__list">
+            <h3 class="footer-top__title">Категории</h3>
+            <ul class="footer-top__ul">
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link">Популярное</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link">Горячее </a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link">Подборки</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link"> Мнения</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link"> Карьера </a>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-top__list -->
+        </div>
+        <!-- /.footer-top -->
+        <div class="footer-middle">
+          <a href="#" class="footer-middle__logo">
+            <img src="./images/logo-small.svg" alt="logo" class="footer-middle__image" />
+          </a>
+          <ul class="footer-middle__navbar">
+            <li class="footer-middle__item">
+              <a href="#" class="footer-middle__link">контакты</a>
+            </li>
+            <li class="footer-middle__item">
+              <a href="#" class="footer-middle__link">работа у нас</a>
+            </li>
+            <li class="footer-middle__item">
+              <a href="#" class="footer-middle__link">реклама</a>
+            </li>
+            <li class="footer-middle__item">
+              <a href="#" class="footer-middle__link">обратная связь</a>
+            </li>
+          </ul>
+          <div class="footer-middle__social">
+            <a target="_blank" href="https://www.facebook.com" class="footer-middle__social-link">
+              <img src="./images/icons/fb.svg" alt="icon:facebook" class="footer-middle__social-icon" />
+            </a>
+            <a target="_blank" href="https://twitter.com" class="footer-middle__social-link">
+              <img src="./images/icons/twitter.svg" alt="icon:twitter" class="footer-middle__social-icon" />
+            </a>
+            <a target="_blank" href="https://youtube.com" class="footer-middle__social-link">
+              <img src="./images/icons/yt.svg" alt="icon:youtube" class="footer-middle__social-icon" />
+            </a>
+            <a target="_blank" href="https://instagram.com" class="footer-middle__social-link">
+              <img src="./images/icons/inst.svg" alt="icon:instagram" class="footer-middle__social-icon" />
+            </a>
+          </div>
+          <!-- /.footer-middle__social -->
+        </div>
+        <!-- /.footer-middle -->
+        <div class="footer-bottom">
+          <p class="footer-bottom__text" style="overflow-wrap: break-word">
+            Universal - это онлайн издание, в котором мы публикуем полезные материалы о веб разработке: статьи, новости,
+            видеоуроки, подборки, ссылки и курсы. Материалы на сайте бесплатны, но при копировании,указывайте ссылку.
+          </p>
+          <span class="footer-bottom__rights">© 2020 Univesal Magazine</span>
+        </div>
+        <!-- /.footer-bottom -->
+      </div>
+      <!-- /.container -->
+      <a href="#" class="to-top" id="toTop">
+        <img src="./images/icons/arrowup.png" alt="arrow" class="to-top__icon" />
+      </a>
+    </footer>
 
     <script src="./scripts/jquery-3.6.0.min.js"></script>
-
+    <script src="./scripts/swiper-bundle.min.js"></script>
     <script src="./scripts/main.js"></script>
   </body>
 </html>
