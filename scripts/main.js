@@ -4,6 +4,7 @@ $(document).ready(function () {
   var contentItem = $(".content__item");
   var mobileButton = $(".mobile-button");
   var mobileMenu = $(".mobile-menu");
+  var bookmarkButton = $(".news-item__bookmark");
 
   tabsItem.on("click", function (event) {
     var activeContent = $(this).attr("data-target");
@@ -16,5 +17,9 @@ $(document).ready(function () {
   mobileButton.on("click", function () {
     mobileMenu.toggleClass("mobile-menu--active");
     mobileButton.toggleClass("mobile-button--active");
+  });
+
+  bookmarkButton.on("click", function (event) {
+    $(this).toggleClass("news-item__bookmark--active");
   });
 });
