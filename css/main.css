@@ -2063,7 +2063,10 @@ label.invalid {
     .footer-middle__item {
       margin: 0 0 10px; }
     .footer-middle__social {
-      margin-top: 10px; } }
+      margin-top: 10px; }
+  label.invalid {
+    bottom: unset;
+    top: -14px; } }
 
 @media screen and (max-width: 480px) {
   .news-item {
@@ -2231,5 +2234,7 @@ label.invalid {
   .footer-middle__link:hover {
     text-decoration: underline; }
   .footer-middle__social-link:hover::before {
-    opacity: 0.5; } }
+    opacity: 0.5; }
+  .to-top:hover::before {
+    opacity: 0.2; } }
 /*# sourceMappingURL=main.css.map */
