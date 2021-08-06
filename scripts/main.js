@@ -54,4 +54,25 @@ $(document).ready(function () {
       delay: 3000,
     },
   });
+
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+
+      messages: {
+        name: {
+          minlength: "Имя должно состоять минимум из 2 букв",
+          required: "Введите своё имя, пожалуйста",
+        },
+        email: {
+          required: "Введите свою электронную почту",
+          email: "Формат записи: 'имя@домен.com'",
+        },
+        phone: {
+          minlength: "Введите свой номер целиком",
+          required: "Введите, пожалуйста, свой номер телефона",
+        },
+      },
+    });
+  });
 });

@@ -360,9 +360,23 @@ button {
   align-items: center;
   font-weight: 900; }
 
+.overflow {
+  overflow: hidden; }
+
+.invalid {
+  color: red;
+  font-size: 12px;
+  line-height: 14px; }
+
+label.invalid {
+  position: absolute;
+  bottom: -15px; }
+
 .header {
   position: relative;
   padding: 15px 0; }
+  .header-primary {
+    background-color: #262D33; }
   .header-wrapper {
     display: flex;
     align-items: center; }
@@ -1498,6 +1512,30 @@ button {
     height: 100%;
     opacity: 0;
     transition: 0.3s; }
+
+.thankyou__wrapper {
+  padding: 80px 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.thankyou__title {
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 40px;
+  font-size: 40px;
+  line-height: 50px; }
+
+.thankyou__button {
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 900;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  cursor: pointer; }
 
 @media screen and (max-width: 1200px) {
   .container {

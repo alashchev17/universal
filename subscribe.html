@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Universal - Запрос на подписку</title>
+  </head>
+  <body>
+    <header class="header header-primary">
+      <div class="container">
+        <div class="header-wrapper">
+          <a href="./index.html" class="logo header__logo">
+            <img class="logo__image" src="./images/logo--primary.svg" alt="logo" />
+          </a>
+          <nav class="header__nav" id="navbar">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a href="#footer" class="header__link">Статьи</a></li>
+              <li class="header__menu-item"><a href="#footer" class="header__link">Новости</a></li>
+              <li class="header__menu-item"><a href="#footer" class="header__link">Горячее</a></li>
+              <li class="header__menu-item"><a href="#footer" class="header__link">HTML</a></li>
+              <li class="header__menu-item"><a href="#footer" class="header__link">CSS</a></li>
+              <li class="header__menu-item"><a href="#footer" class="header__link">JavaScript</a></li>
+              <li class="header__menu-item"><a href="#footer" class="header__link">Web Design</a></li>
+            </ul>
+          </nav>
+          <button class="header__button">Оставить заявку</button>
+          <button class="header__mobile-button mobile-button">
+            <span class="mobile-button__item"></span>
+            <span class="mobile-button__item"></span>
+            <span class="mobile-button__item"></span>
+          </button>
+        </div>
+        <!-- /.header-wrapper -->
+        <nav class="mobile-menu">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Статьи</a></li>
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Новости</a></li>
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Горячее</a></li>
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">HTML</a></li>
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">CSS</a></li>
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">JavaScript</a></li>
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Web Design</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /.container -->
+    </header>
+    <section class="thankyou">
+      <div class="container">
+        <div class="thankyou__wrapper">
+          <h1 class="thankyou__title">Спасибо за подписку на наши новости</h1>
+          <a onclick="javascript:history.back(); return false;" class="button thankyou__button">Назад</a>
+        </div>
+        <!-- /.thankyou__wrapper -->
+      </div>
+      <!-- /.container -->
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__subscribe subscribe">
+          <h2 class="subscribe__title">Подпишитесь на нашу рассылку</h2>
+          <form action="send.php" method="POST" class="subscribe__form form">
+            <div class="subscribe__form-item">
+              <input name="email" type="email" class="subscribe__input" placeholder="Email" required />
+            </div>
+            <button type="submit" class="button subscribe__button">Подписаться</button>
+          </form>
+        </div>
+        <!-- /.subscribe -->
+        <div class="footer-top">
+          <div class="footer-top__list">
+            <h3 class="footer-top__title">Новости</h3>
+            <ul class="footer-top__ul">
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Обновления</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Экспресс</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Politics</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Solar Eclipse</a>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-top__list -->
+          <div class="footer-top__list">
+            <h3 class="footer-top__title">Статьи</h3>
+            <ul class="footer-top__ul">
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">HTML</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">CSS</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">JavaScript</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Web Design</a>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-top__list -->
+          <div class="footer-top__list">
+            <h3 class="footer-top__title">Видеоуроки</h3>
+            <ul class="footer-top__ul">
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Скринкасты</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Уроки</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Вебинары</a>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-top__list -->
+          <div class="footer-top__list">
+            <h3 class="footer-top__title">Курсы</h3>
+            <ul class="footer-top__ul">
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Платные интенсивы</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Бесплатные стримы</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link">Мастер-классы</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link"> Менторство</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link"> Буткемпы </a>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-top__list -->
+          <div class="footer-top__list">
+            <h3 class="footer-top__title">Информация</h3>
+            <ul class="footer-top__ul">
+              <li class="footer-top__item">
+                <a href="#" class="footer-top__link"> Политика данных</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link">Оферта сайта</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link">Реквизиты</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link"> Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-top__list -->
+          <div class="footer-top__list">
+            <h3 class="footer-top__title">Категории</h3>
+            <ul class="footer-top__ul">
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link">Популярное</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link">Горячее </a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link">Подборки</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link"> Мнения</a>
+              </li>
+              <li class="footer-top__item">
+                <a href="" class="footer-top__link"> Карьера </a>
+              </li>
+            </ul>
+          </div>
+          <!-- footer-top__list -->
+        </div>
+        <!-- /.footer-top -->
+        <div class="footer-middle">
+          <a href="#" class="footer-middle__logo">
+            <img src="img/logo-small.svg" alt="logo" class="footer-middle__image" />
+          </a>
+          <ul class="footer-middle__navbar">
+            <li class="footer-middle__item">
+              <a href="#" class="footer-middle__link">контакты</a>
+            </li>
+            <li class="footer-middle__item">
+              <a href="#" class="footer-middle__link">работа у нас</a>
+            </li>
+            <li class="footer-middle__item">
+              <a href="#" class="footer-middle__link">реклама</a>
+            </li>
+            <li class="footer-middle__item">
+              <a href="#" class="footer-middle__link">обратная связь</a>
+            </li>
+          </ul>
+          <div class="footer-middle__social">
+            <a target="_blank" href="https://www.facebook.com" class="footer-middle__social-link">
+              <img src="img/icons/fb.svg" alt="icon:facebook" class="footer-middle__social-icon" />
+            </a>
+            <a target="_blank" href="https://twitter.com" class="footer-middle__social-link">
+              <img src="img/icons/twitter.svg" alt="icon:twitter" class="footer-middle__social-icon" />
+            </a>
+            <a target="_blank" href="https://youtube.com" class="footer-middle__social-link">
+              <img src="img/icons/yt.svg" alt="icon:youtube" class="footer-middle__social-icon" />
+            </a>
+            <a target="_blank" href="https://instagram.com" class="footer-middle__social-link">
+              <img src="img/icons/inst.svg" alt="icon:instagram" class="footer-middle__social-icon" />
+            </a>
+          </div>
+          <!-- /.footer-middle__social -->
+        </div>
+        <!-- /.footer-middle -->
+        <div class="footer-bottom">
+          <p class="footer-bottom__text">
+            Universal - это онлайн издание, в котором мы публикуем полезные материалы о веб разработке: статьи, новости,
+            видеоуроки, подборки, ссылки и курсы. Материалы на сайте бесплатны, но при копировании,указывайте ссылку.
+          </p>
+          <span class="footer-bottom__rights">&#169; 2020 Univesal Magazine</span>
+        </div>
+        <!-- /.footer-bottom -->
+      </div>
+      <!-- /.container -->
+      <a href="#" class="to-top" id="toTop"> <img src="img/icons/arrowup.png" alt="arrow" class="to-top__icon" /> </a>
+    </footer>
+    <script src="./scripts/jquery-3.6.0.min.js"></script>
+    <script src="./scripts/jquery.validate.min.js"></script>
+    <script src="./scripts/swiper-bundle.min.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
