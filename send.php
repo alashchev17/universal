@@ -16,9 +16,6 @@ if ($email != "" && $name == "" && $phone = ""){
   ";
   header('location: subscribe.html');
 }
-else {
-  header('location: index.html');
-}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
