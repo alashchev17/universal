@@ -142,13 +142,6 @@
     &__description
       br
         display: none
-  .hot
-    &__link
-      flex-basis: 50%
-      &:nth-child(even)
-        padding-right: 25px
-      &:nth-child(odd)
-        padding-left: 0
   .dream
     &__title
       font-size: 22px
@@ -283,6 +276,12 @@
     justify-content: space-around
     flex-wrap: wrap
     row-gap: 25px
+    &__link
+      flex-basis: 50%
+      &:nth-child(even)
+        padding-right: 25px
+      &:nth-child(odd)
+        padding-left: 0
 @media screen and ( max-width: 768px )
   .articles
     &__title

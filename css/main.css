@@ -1666,12 +1666,6 @@ label.invalid {
     padding: 30px 50px; }
   .heading__description br {
     display: none; }
-  .hot__link {
-    flex-basis: 50%; }
-    .hot__link:nth-child(even) {
-      padding-right: 25px; }
-    .hot__link:nth-child(odd) {
-      padding-left: 0; }
   .dream__title {
     font-size: 22px;
     line-height: 28px; }
@@ -1792,7 +1786,13 @@ label.invalid {
   .hot {
     justify-content: space-around;
     flex-wrap: wrap;
-    row-gap: 25px; } }
+    row-gap: 25px; }
+    .hot__link {
+      flex-basis: 50%; }
+      .hot__link:nth-child(even) {
+        padding-right: 25px; }
+      .hot__link:nth-child(odd) {
+        padding-left: 0; } }
 
 @media screen and (max-width: 768px) {
   .articles__title {
