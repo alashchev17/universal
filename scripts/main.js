@@ -18,7 +18,6 @@ $(document).ready(function () {
     mobileMenu.toggleClass("mobile-menu--active");
     mobileButton.toggleClass("mobile-button--active");
   });
-
   bookmarkButton.on("click", function (event) {
     $(this).toggleClass("news-item__bookmark--active");
   });
@@ -38,6 +37,14 @@ $(document).ready(function () {
 
   $("#navbar").on("click", "a", function (event) {
     event.preventDefault();
+    var id = $(this).attr("href"),
+      top = $(id).offset().top;
+    $("body, html").animate({ scrollTop: top }, 500);
+  });
+  $("#mobile-menu").on("click", "a", function (event) {
+    event.preventDefault();
+    mobileMenu.removeClass("mobile-menu--active");
+    mobileButton.removeClass("mobile-button--active");
     var id = $(this).attr("href"),
       top = $(id).offset().top;
     $("body, html").animate({ scrollTop: top }, 500);
