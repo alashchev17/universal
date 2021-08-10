@@ -109,7 +109,7 @@
       &--active
         position: fixed
         top: 37px
-        right: 15px
+        right: 30px
         .mobile-button__item
           background-color: $dark
           &:not(:last-child)
@@ -157,7 +157,7 @@
         color: $dark
       
   .heading
-    padding: 105px 0
+    padding: 105px 0 31px 0
     &__area
       flex-direction: column
       height: unset
@@ -365,6 +365,8 @@
       &:nth-child(odd)
         padding-left: 0
 @media screen and ( max-width: 768px )
+  .container
+    padding: 0 30px
   .articles
     &__title
       font-size: 13px

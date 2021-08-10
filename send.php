@@ -23,14 +23,14 @@ if ($message === '' && $theme === '' && $comment === '' && $email !== '') {
     <b>Тема:</b> $theme<br><br>
     <b>Сообщение:</b> $message
     ";
-    header('location: thankyou.html');   
-} elseif ($message === '' && $theme === '' && $comment === '' && $email === '' && $comment !== '') {
+    header('location: thankyou.html');
+} else {
     $title = "Новый комментарий - Universal";
     $body = "
     <h2>Новый комментарий нуждается в модерации.</h2>
     <b>Комментарий:</b><br>$comment
     ";
-    header('location: thankyou.html')
+    header('location: thankyou.html');
 }
 
 // Настройки PHPMailer

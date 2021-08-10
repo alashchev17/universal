@@ -2444,7 +2444,7 @@ label.invalid {
     .mobile-button--active {
       position: fixed;
       top: 37px;
-      right: 15px; }
+      right: 30px; }
       .mobile-button--active .mobile-button__item {
         background-color: #262D33; }
         .mobile-button--active .mobile-button__item:not(:last-child) {
@@ -2489,7 +2489,7 @@ label.invalid {
   .mobile-menu__link {
     color: #262D33; }
   .heading {
-    padding: 105px 0; }
+    padding: 105px 0 31px 0; }
     .heading__area {
       flex-direction: column;
       height: unset; }
@@ -2682,6 +2682,8 @@ label.invalid {
         padding-left: 0; } }
 
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 0 30px; }
   .articles__title {
     font-size: 13px;
     line-height: 18px; }
