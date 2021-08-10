@@ -346,6 +346,11 @@ a {
   text-decoration: none;
   color: inherit; }
 
+input, textarea, select {
+  background: none;
+  outline: none;
+  border: none; }
+
 button {
   border: none;
   outline: none;
@@ -370,7 +375,8 @@ button {
 
 label.invalid {
   position: absolute;
-  bottom: -15px; }
+  bottom: 0;
+  left: 0; }
 
 .header {
   position: relative;
@@ -413,6 +419,149 @@ label.invalid {
 
 .mobile-menu {
   display: none; }
+
+.modal__overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden; }
+  .modal__overlay--visible {
+    visibility: visible;
+    opacity: 0.8;
+    z-index: 2000;
+    background-color: rgba(38, 45, 51, 0.8);
+    transition: visibility 0.5s ease, opacity 0.5s ease; }
+  .modal__overlay--hidden {
+    transition: visibility 0.5s ease, opacity 0.5s ease; }
+
+.modal__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150vh);
+  z-index: 2001;
+  background-color: #FFFFFF;
+  padding: 30px 35px 40px 35px;
+  overflow: auto;
+  border-radius: 10px;
+  width: 360px; }
+  .modal__dialog--visible {
+    visibility: visible;
+    transform: translate(-50%, -50%);
+    transition: transform 1.3s ease, visibility 1.3s ease; }
+  .modal__dialog--hidden {
+    transition: transform 1.3s ease, visibility 1.3s ease; }
+
+.modal__close {
+  background-image: url("../images/modal/close.svg");
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  cursor: pointer;
+  transition: transform 0.35s ease-in-out; }
+  .modal__close:hover {
+    transform: rotate(180deg); }
+
+.modal__title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 125%;
+  font-family: "Roboto Slab", sans-serif;
+  color: #262D33;
+  margin-bottom: 25px; }
+
+.modal-section__title {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 143%;
+  color: #262D33;
+  margin-bottom: 5px; }
+
+.modal-theme {
+  position: relative; }
+  .modal-theme__select {
+    border: 1px solid #D9DADB;
+    border-radius: 5px;
+    width: 100%;
+    appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 143%; }
+  .modal-theme__arrow {
+    position: absolute;
+    top: 42px;
+    right: 15px;
+    width: 9px;
+    height: 5px; }
+
+.modal-message__message {
+  border: 1px solid #D9DADB;
+  border-radius: 5px;
+  resize: none;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 143%; }
+
+.modal-email__input {
+  border: 1px solid #D9DADB;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 143%; }
+
+.modal__button {
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 143%;
+  margin-top: 15px; }
+
+.modal-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center; }
+  .modal-checkbox__input {
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+  .modal-checkbox__label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #4592FF;
+    border-radius: 3px;
+    margin-right: 10px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s ease-in-out;
+    margin-bottom: 15px; }
+    .modal-checkbox__label:hover {
+      background-color: #92bfff; }
+    .modal-checkbox__label--active {
+      background-image: url("../images/modal/check.svg");
+      background-repeat: no-repeat;
+      background-position: center center; }
+  .modal-checkbox__info {
+    margin-bottom: 15px; }
+
+.modal__form-item {
+  position: relative; }
 
 .heading {
   padding: 31px 0; }
@@ -838,7 +987,7 @@ label.invalid {
     position: absolute;
     top: 24px;
     right: 22px;
-    z-index: 10;
+    z-index: -1;
     width: 72px; }
   .download__info {
     padding: 25px 25px 19px; }
@@ -1348,7 +1497,7 @@ label.invalid {
   cursor: pointer; }
 
 .subscribe {
-  padding: 60px 0 67px;
+  padding: 60px 0 52px;
   display: flex;
   align-items: center;
   flex-direction: column; }
@@ -1381,7 +1530,8 @@ label.invalid {
     border: 1px solid #D9DADB;
     box-sizing: border-box;
     border-radius: 5px;
-    margin-right: 10px; }
+    margin-right: 10px;
+    margin-bottom: 15px; }
     .subscribe__input:placeholder {
       color: #939699; }
   .subscribe__button {
@@ -1390,7 +1540,8 @@ label.invalid {
     font-size: 14px;
     line-height: 20px;
     border: none;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    margin-bottom: 15px; }
 
 .footer {
   background-color: #fff; }
@@ -2063,10 +2214,7 @@ label.invalid {
     .footer-middle__item {
       margin: 0 0 10px; }
     .footer-middle__social {
-      margin-top: 10px; }
-  label.invalid {
-    bottom: unset;
-    top: -14px; } }
+      margin-top: 10px; } }
 
 @media screen and (max-width: 480px) {
   .news-item {
@@ -2237,4 +2385,12 @@ label.invalid {
     opacity: 0.5; }
   .to-top:hover::before {
     opacity: 0.2; } }
+
+@media screen and (max-width: 480px) {
+  .modal__dialog {
+    width: 90%; } }
+
+@media screen and (max-height: 576px) {
+  .modal__dialog {
+    max-height: 90vh; } }
 /*# sourceMappingURL=main.css.map */

@@ -579,9 +579,6 @@
         margin: 0 0 10px
       &__social
         margin-top: 10px
-  label.invalid
-    bottom: unset
-    top: -14px
 @media screen and ( max-width: 480px )
   .news
     &-item
@@ -804,3 +801,12 @@
     &:hover
       &::before
         opacity: 0.2
+
+@media screen and (max-width: 480px)
+  .modal
+    &__dialog
+      width: 90%
+@media screen and (max-height: 576px)
+  .modal
+    &__dialog
+      max-height: 90vh

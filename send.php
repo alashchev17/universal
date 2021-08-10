@@ -4,13 +4,26 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 // Переменные, которые отправляет пользователь
 $email = $_POST['email'];
+$theme = $_POST['theme'];
+$message = $_POST['message'];
 
-$title = "Запрос на подписку - Universal";
-$body = "
-<h2>Новое обращение от пользователя.</h2>
-<b>$email</b> хочет подписаться на обновления новостного портала <b>Universal</b>
-";
-header('location: subscribe.html');
+if ($message === '' && $theme === '' && $email !== '') {
+    $title = "Запрос на подписку - Universal";
+    $body = "
+    <h2>Новое обращение от пользователя.</h2>
+    <b>$email</b> хочет подписаться на обновления новостного портала <b>Universal</b>
+    ";
+    header('location: subscribe.html');
+} elseif ($message !== '' && $theme !== '' && $email !== '') {
+    $title = "Новая заявка - Universal";
+    $body = "
+    <h2>Пользователь оставил заявку на сайте Universal.</h2>
+    <b>Электронная почта:</b> $email<br>
+    <b>Тема:</b> $theme<br><br>
+    <b>Сообщение:</b> $message
+    ";
+    header('location: thankyou.html');
+}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();

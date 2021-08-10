@@ -31,7 +31,8 @@ $(document).ready(function () {
       toTop.removeClass("to-top--visible");
     }
   });
-  $(".to-top").click(function () {
+  $(".to-top").click(function (event) {
+    event.preventDefault();
     $("body,html").animate({ scrollTop: 0 }, 400);
   });
 
@@ -40,6 +41,42 @@ $(document).ready(function () {
     var id = $(this).attr("href"),
       top = $(id).offset().top;
     $("body, html").animate({ scrollTop: top }, 500);
+  });
+
+  let modalButton = $("[data-toggle=modal]"),
+    closeButton = $("[data-close=modal]");
+  modalButton.on("click", function (event) {
+    event.preventDefault();
+    let modalOverlay = $(".modal__overlay");
+    let modalDialog = $(".modal__dialog");
+    modalOverlay.addClass("modal__overlay--visible");
+    modalDialog.addClass("modal__dialog--visible");
+  });
+  closeButton.on("click", function (event) {
+    event.preventDefault();
+    let modalOverlay = $(".modal__overlay"),
+      modalDialog = $(".modal__dialog");
+    modalOverlay.removeClass("modal__overlay--visible");
+    modalOverlay.addClass("modal__overlay--hidden");
+    modalDialog.removeClass("modal__dialog--visible");
+    modalDialog.addClass("modal__dialog--hidden");
+  });
+
+  $(document).keyup(function (event) {
+    if ("Escape" === event.key || 27 === a.keyCode) {
+      event.preventDefault();
+      let modalOverlay = $(".modal__overlay"),
+        modalDialog = $(".modal__dialog");
+      modalOverlay.removeClass("modal__overlay--visible");
+      modalOverlay.addClass("modal__overlay--hidden");
+      modalDialog.removeClass("modal__dialog--visible");
+      modalDialog.addClass("modal__dialog--hidden");
+    }
+  });
+
+  let checkboxLabel = $("#modal-checkbox__label");
+  checkboxLabel.on("click", function () {
+    checkboxLabel.toggleClass("modal-checkbox__label--active");
   });
 
   const swiper = new Swiper(".career-swiper", {
@@ -71,6 +108,15 @@ $(document).ready(function () {
         phone: {
           minlength: "Введите свой номер целиком",
           required: "Введите, пожалуйста, свой номер телефона",
+        },
+        message: {
+          required: "Введите ваше сообщение, пожалуйста",
+        },
+        checkbox: {
+          required: "Поставьте галочку, пожалуйста",
+        },
+        theme: {
+          required: "Выберите тему из предложенных!",
         },
       },
     });

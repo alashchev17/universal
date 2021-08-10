@@ -1,0 +1,138 @@
+.modal
+  &__overlay
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    opacity: 0
+    z-index: -1
+    visibility: hidden
+    &--visible
+      visibility: visible
+      opacity: 0.8
+      z-index: 2000
+      background-color: rgba($dark, 0.8)
+      transition: visibility 0.5s ease, opacity 0.5s ease
+    &--hidden
+      transition: visibility 0.5s ease, opacity 0.5s ease
+  &__dialog
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -150vh)
+    z-index: 2001
+    background-color: $light-text
+    padding: 30px 35px 40px 35px
+    overflow: auto
+    border-radius: 10px
+    width: 360px
+    &--visible
+      visibility: visible
+      transform: translate(-50%, -50%)
+      transition: transform 1.3s ease, visibility 1.3s ease
+    &--hidden
+      transition: transform 1.3s ease, visibility 1.3s ease
+  &__close
+    background-image: url("../images/modal/close.svg")
+    width: 16px
+    height: 16px
+    position: absolute
+    top: 17px
+    right: 17px
+    cursor: pointer
+    transition: transform 0.35s ease-in-out
+    &:hover
+      transform: rotate(180deg)
+  &__title
+    font-weight: bold
+    font-size: 20px
+    line-height: 125%
+    font-family: "Roboto Slab", sans-serif
+    color: $dark
+    margin-bottom: 25px
+  &-section
+    &__title
+      font-weight: 900
+      font-size: 14px
+      line-height: 143%
+      color: $dark
+      margin-bottom: 5px
+  &-theme
+    position: relative
+    &__select
+      border: 1px solid #D9DADB
+      border-radius: 5px
+      width: 100%
+      appearance: none
+      text-indent: 1px
+      text-overflow: ''
+      padding: 10px 15px
+      margin-bottom: 15px
+      font-size: 14px
+      line-height: 143%
+      &--heading
+    &__arrow
+      position: absolute
+      top: 42px
+      right: 15px
+      width: 9px
+      height: 5px
+  &-message
+    &__message
+      border: 1px solid #D9DADB
+      border-radius: 5px
+      resize: none
+      width: 100%
+      height: 120px
+      margin-bottom: 15px
+      padding: 10px 15px
+      font-size: 14px
+      line-height: 143%
+  &-email
+    &__input
+      border: 1px solid #D9DADB
+      border-radius: 5px
+      width: 100%
+      margin-bottom: 15px
+      padding: 10px 15px
+      font-size: 14px
+      line-height: 143%
+  &__button
+    color: $light-text
+    font-size: 14px
+    line-height: 143%
+    margin-top: 15px
+  &-checkbox
+    position: relative
+    display: flex
+    align-items: center
+    &__input
+      visibility: hidden
+      width: 0
+      height: 0
+    &__label
+      display: inline-block
+      width: 20px
+      height: 20px
+      background-color: #4592FF
+      border-radius: 3px
+      margin-right: 10px
+      user-select: none
+      cursor: pointer
+      position: relative
+      transition: background-color 0.2s ease-in-out
+      margin-bottom: 15px
+      &:hover
+        background-color: lighten(#4592FF, 15%)
+      &--active
+        background-image: url('../images/modal/check.svg')
+        background-repeat: no-repeat
+        background-position: center center
+    &__info
+      margin-bottom: 15px
+  &__form
+    &-item
+      position: relative
