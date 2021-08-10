@@ -1,13 +1,14 @@
 $(document).ready(function () {
   // табы
-  var tabsItem = $(".heading__tabs-item");
-  var contentItem = $(".content__item");
-  var mobileButton = $(".mobile-button");
-  var mobileMenu = $(".mobile-menu");
-  var bookmarkButton = $(".news-item__bookmark");
+  let tabsItem = $(".heading__tabs-item");
+  let contentItem = $(".content__item");
+  let mobileButton = $(".mobile-button");
+  let mobileMenu = $(".mobile-menu");
+  let bookmarkButton = $(".news-item__bookmark");
+  let bigBookmarkButton = $(".main-news__bookmark");
 
   tabsItem.on("click", function (event) {
-    var activeContent = $(this).attr("data-target");
+    let activeContent = $(this).attr("data-target");
     tabsItem.removeClass("heading__tabs-item--active");
     contentItem.removeClass("content__item--active");
     $(activeContent).addClass("content__item--active");
@@ -21,8 +22,11 @@ $(document).ready(function () {
   bookmarkButton.on("click", function (event) {
     $(this).toggleClass("news-item__bookmark--active");
   });
+  bigBookmarkButton.on("click", function () {
+    $(this).toggleClass("main-news__bookmark--active");
+  });
 
-  var toTop = $(".to-top");
+  let toTop = $(".to-top");
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
       toTop.addClass("to-top--visible");
@@ -35,17 +39,21 @@ $(document).ready(function () {
     $("body,html").animate({ scrollTop: 0 }, 400);
   });
 
-  $("#navbar").on("click", "a", function (event) {
-    event.preventDefault();
-    var id = $(this).attr("href"),
+  $("#navbar").on("click", "a", function () {
+    let id = $(this).attr("href"),
       top = $(id).offset().top;
     $("body, html").animate({ scrollTop: top }, 500);
   });
-  $("#mobile-menu").on("click", "a", function (event) {
+  $(".comments__add").on("click", function (event) {
     event.preventDefault();
+    var id = $(this).attr("href"),
+      top = $(id).offset().top;
+    $("body,html").animate({ scrollTop: top }, 500);
+  });
+  $("#mobile-menu").on("click", "a", function () {
     mobileMenu.removeClass("mobile-menu--active");
     mobileButton.removeClass("mobile-button--active");
-    var id = $(this).attr("href"),
+    let id = $(this).attr("href"),
       top = $(id).offset().top;
     $("body, html").animate({ scrollTop: top }, 500);
   });
@@ -99,6 +107,29 @@ $(document).ready(function () {
     },
   });
 
+  const swiperArticle = new Swiper(".hero-article__swiper", {
+    loop: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    navigation: {
+      nextEl: ".hero-article__slide-button--next",
+      prevEl: ".hero-article__slide-button--prev",
+    },
+  });
+
+  $(function () {
+    $(".comments__item").slice(0, 4).show();
+    $("#loadMore").on("click", function (e) {
+      e.preventDefault();
+      $(".comments__item:hidden").slice(0, 4).slideDown();
+      if ($(".comments__item:hidden").length == 0) {
+        $("#loadMore").attr("disabled", true);
+      }
+    });
+  });
+
   $(".form").each(function () {
     $(this).validate({
       errorClass: "invalid",
@@ -124,6 +155,10 @@ $(document).ready(function () {
         },
         theme: {
           required: "Выберите тему из предложенных!",
+        },
+        comment: {
+          required: "Заполните поле комментария",
+          minlength: "Необходимо ввести минимум 100 символов",
         },
       },
     });

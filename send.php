@@ -6,15 +6,16 @@ require 'phpmailer/Exception.php';
 $email = $_POST['email'];
 $theme = $_POST['theme'];
 $message = $_POST['message'];
+$comment = $_POST['comment'];
 
-if ($message === '' && $theme === '' && $email !== '') {
+if ($message === '' && $theme === '' && $comment === '' && $email !== '') {
     $title = "Запрос на подписку - Universal";
     $body = "
     <h2>Новое обращение от пользователя.</h2>
     <b>$email</b> хочет подписаться на обновления новостного портала <b>Universal</b>
     ";
     header('location: subscribe.html');
-} elseif ($message !== '' && $theme !== '' && $email !== '') {
+} elseif ($message !== '' && $theme !== '' && $email !== '' && $comment === '') {
     $title = "Новая заявка - Universal";
     $body = "
     <h2>Пользователь оставил заявку на сайте Universal.</h2>
@@ -22,7 +23,14 @@ if ($message === '' && $theme === '' && $email !== '') {
     <b>Тема:</b> $theme<br><br>
     <b>Сообщение:</b> $message
     ";
-    header('location: thankyou.html');
+    header('location: thankyou.html');   
+} elseif ($message === '' && $theme === '' && $comment === '' && $email === '' && $comment !== '') {
+    $title = "Новый комментарий - Universal";
+    $body = "
+    <h2>Новый комментарий нуждается в модерации.</h2>
+    <b>Комментарий:</b><br>$comment
+    ";
+    header('location: thankyou.html')
 }
 
 // Настройки PHPMailer

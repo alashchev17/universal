@@ -1,0 +1,218 @@
+.comments
+  padding: 90px 0 30px
+  background-color: #fff
+  &__wrapper
+    margin-left: 100px
+    max-width: 750px
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 24px
+  &__title
+    font-family: 'Roboto Slab', sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 40px
+    line-height: 50px
+  &__count
+    font-family: 'Lato', sans-serif
+    font-weight: normal
+    font-size: 40px
+    line-height: 50px
+    color: #939699
+  &__add
+    margin-top: 3px
+    align-self: flex-start
+    display: flex
+    align-items: center
+    border: 1px solid #D9DADB
+    border-radius: 20px
+    padding: 10px 20px
+    font-style: normal
+    font-weight: 900
+    font-size: 14px
+    line-height: 20px
+    color: $dark
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 0
+      border-radius: 20px
+      background-color: $dark
+      width: 100%
+      height: 100%
+      opacity: 0
+      transition: 0.3s
+    &-icon
+      margin-right: 11px
+  &__ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+  &__item
+    display: none
+    border-top: 1px solid #D9DADB
+    &--pl9
+      padding-left: 90px
+    &-card
+      display: flex
+      padding: 20px 0 29px
+      &:last-child
+        padding-bottom: 30px
+    &-avatar
+      width: 75px
+      height: 75px
+      object-fit: cover
+      border-radius: 50%
+      margin-right: 15px
+    &-top
+      display: flex
+      align-items: center
+      margin-bottom: 10px
+    &-name
+      font-family: 'Roboto Slab', sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 16px
+      line-height: 25px
+      color: $dark
+      margin-right: 10px
+    &-time
+      font-size: 12px
+      line-height: 15px
+      color: #939699
+    &-text
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 30px
+      color: #4B5157
+      margin-bottom: 15px
+      max-width: 570px
+    &-data
+      display: flex
+      align-items: center
+      font-size: 12px
+      line-height: 15px
+    &-answer
+      display: inline-block
+      margin-left: 5.75px
+      margin-right: 15.75px
+    &-count
+      display: inline-block
+      margin: 0 10.75px
+      color: #939699
+      &--green
+        color: #3DC47E
+      &--red
+        color: #FF4F52
+  &__load
+    &-more
+      width: 100%
+      padding: 13px 0
+      border: 1px solid #D9DADB
+      border-radius: 25px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      background-color: #fff
+      margin-bottom: 60px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 0
+        border-radius: 20px
+        background-color: $dark
+        width: 100%
+        height: 100%
+        opacity: 0
+        transition: 0.3s
+    &-icon
+      margin-left: 20px
+      margin-right: 7.75px
+  &__form
+    background: #F5F5F5
+    border-radius: 10px
+    padding: 30px 40px 35px 30px
+    position: relative
+    &-title
+      font-family: 'Roboto Slab', sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 25px
+      margin-bottom: 15px
+      margin-left: 93px
+    &-block
+      display: flex
+      align-items: flex-start
+    &-avatar
+      width: 75px
+      height: 75px
+      border-radius: 50%
+      margin-right: 18px
+    &-input
+      position: relative
+      z-index: 90
+      width: 100%
+      min-height: 130px
+      margin-bottom: 15px
+      border: 1px solid #D9DADB
+      border-radius: 10px
+      display: flex
+      &::before
+        content: ''
+        position: absolute
+        top: 27px
+        left: -8px
+        z-index: 100
+        width: 0
+        height: 0
+        border-top: 8px solid transparent
+        border-right: 8px solid #D9DADB
+        border-bottom: 8px solid transparent
+      &::after
+        content: ''
+        position: absolute
+        top: 27px
+        left: -7px
+        z-index: 100
+        width: 0
+        height: 0
+        border-top: 7px solid transparent
+        border-right: 7px solid #fff
+        border-bottom: 7px solid transparent
+    &-textarea
+      border-radius: 10px
+      width: 100%
+      min-height: 130px
+      border: none
+      outline: none
+      resize: none
+      padding: 20px
+      font-size: 14px
+      line-height: 143%
+      background-color: $light-text
+    &-button
+      padding: 10px 20px
+      border: none
+      margin-left: 96px
+      font-style: normal
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      color: $light-text
+    &-icon
+      margin-left: 8px
+#comment-error
+  bottom: -15px

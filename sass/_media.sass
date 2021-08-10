@@ -58,6 +58,29 @@
         &-small
           font-size: 14px
           line-height: 25px
+  .main-news
+    &__title
+      font-size: 40px
+      line-height: 50px
+  .hero-article
+    &__user
+      right: 0
+    &__lead
+      max-width: 530px
+    &__paragraph
+      max-width: 520px
+    &__theme
+      right: 0
+    &__subtitle
+      max-width: 550px
+      font-size: 24px
+  .more-articles
+    &__card
+      max-width: 210px
+    &__image
+      height: 160px
+    &__title
+      font-size: 14px
 @media screen and ( max-width: 992px )
   .header
     position: fixed
@@ -102,6 +125,8 @@
         height: 1px
         background-color: $light-bg
         transition: 0.3s ease
+        &--white
+          background-color: $dark
         &:not(:last-child)
           margin-bottom: 5px
     &-menu
@@ -274,6 +299,59 @@
       font-size: 12px
       &__text
         max-width: 550px
+  .main-news
+    &__wrapper
+      padding: 35px 70px
+    &__title
+      font-size: 38px
+      line-height: 50px
+    &__bookmark
+      top: 116px
+
+  .hero-article
+    &__user
+      top: 0
+    &__lead
+      max-width: 350px
+      font-size: 16px
+      line-height: 24px
+    &__paragraph
+      font-size: 16px
+      line-height: 24px
+
+    &__subtitle
+      font-size: 18px
+      line-height: 24px
+    &__text
+      padding: 0 70px
+    &__theme
+      position: static
+      max-width: 550px
+      width: 100%
+      &-wrapper
+        flex-direction: row
+        align-items: center
+      &-image
+        margin: 0 20px 0 0
+        width: 230px
+        height: 140px
+    &__tag
+      padding-left: 70px
+    &__repost
+      margin-left: 70px
+  .more-articles
+    padding: 40px 0 60px
+    &__card
+      max-width: 168px
+    &__image
+      height: 120px
+    &__title
+      font-size: 12px
+      line-height: 18px
+  .comments
+    padding-top: 60px
+    &__wrapper
+      margin-left: 0
 @media screen and ( max-width: 930px )
   .hot
     justify-content: space-around
@@ -453,6 +531,137 @@
       flex-wrap: wrap
       &__text
         margin-bottom: 20px
+  .main-news
+    &__wrapper
+      padding-top: 40px
+      padding-left: 0
+      padding-right: 0
+    &__top
+      flex-wrap: wrap-reverse
+      margin-bottom: 30px
+    &__buttons
+      justify-content: space-between
+      max-width: 576px
+      width: 100%
+      margin-bottom: 20px
+
+    &__home
+      margin-right: auto
+    &__bookmark
+      left: auto
+      right: 0
+      top: 80px
+    &__title
+      font-size: 28px
+      line-height: 36px
+      margin-bottom: 60px
+      height: auto
+  .hero-article
+    padding-bottom: 40px
+    &__avatar
+      margin: 0 10px 0 0
+      width: 70px
+      height: 70px
+    &__user
+      top: -140px
+      right: 0
+      width: auto
+      &-text
+        align-items: flex-start
+      &-info
+        margin-bottom: 8px
+        font-size: 12px
+        line-height: 18px
+      &-link
+        font-size: 12px
+        line-height: 18px
+        padding: 10px 0
+    &__username
+      font-size: 16px
+      line-height: 20px
+    &__userbio
+      flex-direction: row
+      align-items: center
+      padding: 20px
+    &__lead
+      max-width: 100%
+      &::first-letter
+        float: none
+    &__text
+      padding: 0
+    &__slide
+      &-info
+        flex-direction: column-reverse
+      &-image
+        height: 390px
+      &-text
+        padding: 10px 15px
+        font-size: 12px
+        line-height: 18px
+        width: 100%
+      &-user
+        padding: 5px 15px
+        border-left: none
+        border-bottom: 1px solid #d9dadb
+      &-button
+        width: 40px
+        height: 40px
+    &__tag
+      padding-left: 0
+    &__theme
+      top: 86%
+      left: 0
+      width: 83vw
+      &-title
+        margin-bottom: 15px
+      &-subtitle
+        font-size: 14px
+      &-text
+        font-size: 12px
+        line-height: 18px
+    &__repost
+      margin-left: 0
+      width: 100%
+      text-align: center
+      &-wrapper
+        justify-content: center
+  .user
+    &__name
+      font-size: 12px
+      line-height: 18px
+  .more-articles
+    &__wrapper
+      flex-wrap: wrap
+    &__card
+      max-width: 768px
+      flex-basis: 47%
+      margin-bottom: 30px
+    &__image
+      height: 180px
+    &__title
+      font-size: 14px
+      line-height: 25px
+  .comments
+    padding-top: 60px
+    &__title, &__count
+      font-size: 28px
+      line-height: 40px
+    &__item
+      &--pl9
+        padding-left: 60px
+      &-avatar
+        width: 45px
+        height: 45px
+      &-name
+        font-size: 14px
+        line-height: 22px
+      &-text
+        font-size: 14px
+        line-height: 25px
+    &__form
+      &-avatar
+        width: 45px
+        height: 45px
 @media screen and ( max-width: 576px )
   .header
     &__button
@@ -582,6 +791,67 @@
         margin: 0 0 10px
       &__social
         margin-top: 10px
+  .main-news
+    &__bookmark
+      width: 17px
+      height: 19px
+    &__title
+      font-size: 22px
+      line-height: 32px
+      margin-bottom: 55px
+    &__text
+      font-size: 16px
+      line-height: 24px
+  .hero-article
+    padding-top: 125px
+    &__user
+      width: 70%
+      right: 50%
+      transform: translateX(50%)
+    &__lead
+      &::first-letter
+        font-size: 60px
+        line-height: 50px
+        margin-left: -4px
+        margin-right: 0
+    &__slide
+      &-image
+        height: 330px
+      &-button
+        top: 35%
+        &--prev
+          left: 15px
+        &--next
+          right: 15px
+    &__tag
+      &-link
+        margin-bottom: 10px
+    &__theme
+      &-image
+        width: 200px
+        height: 150px
+  .more-articles
+    &__image
+      height: 140px
+    &__title
+      font-size: 14px
+      line-height: 25px
+  .comments
+    padding-top: 60px
+    &__title, &__count
+      font-size: 20px
+      line-height: 30px
+    &__add
+      font-size: 12px
+      padding: 7px 16px
+    &__form
+      padding: 18px 25px
+      &-title
+        font-size: 18px
+        text-align: center
+        margin: 0 auto 15px
+      &-button
+        margin: 0 auto
 @media screen and ( max-width: 480px )
   .news
     &-item
@@ -618,6 +888,23 @@
       &:nth-child(4)
         grid-column: 1 / 2
         grid-row: 6 / 7
+  .main-news
+    &__title
+      font-size: 18px
+      line-height: 24px
+    &__text
+      font-size: 14px
+      line-height: 20px
+  .hero-article
+    padding-bottom: 0
+    &__theme
+      &-wrapper
+        flex-direction: column
+      &-image
+        width: 80%
+        height: 200px
+        margin-right: 0
+        margin-bottom: 10px
   
 @media screen and ( max-width: 435px )
   .hot
@@ -688,6 +975,64 @@
   .subscribe
     &__title
       font-size: 14px
+  .hero-article
+    padding-top: 150px
+    &__user
+      top: -170px
+      width: 85%
+    &__slide
+      &-image
+        height: 220px
+    &__repost
+      &-title
+        font-size: 18px
+        line-height: 24px
+      &-wrapper
+        flex-direction: column
+      &-link
+        margin-bottom: 15px
+        &:not(:last-child)
+          margin-right: 0
+  .more-articles
+    padding-bottom: 40px
+    &__wrapper
+      justify-content: center
+    &__card
+      flex-basis: 85%
+    &__image
+      height: 200px
+    &__title
+      font-size: 14px
+      line-height: 25px
+  .comments
+    padding-top: 60px
+    &__top
+      flex-wrap: wrap
+    &__title
+      margin-bottom: 10px
+    &__item
+      &--pl9
+        padding-left: 30px
+      &-avatar
+        width: 30px
+        height: 30px
+        margin-right: 10px
+      &-time
+        font-size: 10px
+      &-text
+        font-size: 12px
+        line-height: 18px
+    &__form
+      &-title
+        font-size: 14px
+      &-avatar
+        width: 30px
+        height: 30px
+        margin-right: 12px
+      &-input
+        min-height: 100px
+      &-textarea
+        min-height: 100px
 @media screen and ( max-width: 400px )
   .header
     &__button
@@ -713,6 +1058,10 @@
     &-card
       &--big
         padding-right: 80px
+  .hero-article
+    &__theme
+      &-image
+        width: 100%
 @media screen and ( min-width: 992px )
   .header
     &__link
@@ -732,6 +1081,21 @@
       &:hover
         &::after
           transform: scaleX(100%)
+      &--white
+        &::after
+          content: ''
+          position: absolute
+          bottom: -10px
+          left: 0
+          width: 100%
+          height: 2px
+          background-color: $dark
+          border-radius: 3px
+          transition: 0.3s ease
+          transform: scaleX(0)
+        &:hover
+          &::after
+            transform: scaleX(100%)
     &__button
       transition: 0.3s ease
       &:hover
@@ -800,6 +1164,35 @@
         &:hover
           &::before
             opacity: 0.5
+  .main-news
+    &__home, &__button
+      &:hover
+        text-decoration: underline
+  .hero-article
+    &__theme
+      &-link
+        &:hover
+          text-decoration: underline
+    &__user
+      &-link
+        &:hover
+          text-decoration: underline
+    &__tag
+      &-link
+        &:hover
+          &::before
+            opacity: 0.5
+    &__repost
+      &-link
+        transition: background-color 0.3s ease
+        &:hover
+          background-color: #3863db
+          opacity: 0.9
+  .comments
+    &__add, &__load-more
+      &:hover
+        &::before
+          opacity: 0.4
   .to-top
     &:hover
       &::before
