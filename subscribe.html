@@ -208,7 +208,7 @@
         <!-- /.footer-top -->
         <div class="footer-middle">
           <a href="#" class="footer-middle__logo">
-            <img src="img/logo-small.svg" alt="logo" class="footer-middle__image" />
+            <img src="./images/logo-small.svg" alt="logo" class="footer-middle__image" />
           </a>
           <ul class="footer-middle__navbar">
             <li class="footer-middle__item">
@@ -226,16 +226,16 @@
           </ul>
           <div class="footer-middle__social">
             <a target="_blank" href="https://www.facebook.com" class="footer-middle__social-link">
-              <img src="img/icons/fb.svg" alt="icon:facebook" class="footer-middle__social-icon" />
+              <img src="./images/icons/fb.svg" alt="icon:facebook" class="footer-middle__social-icon" />
             </a>
             <a target="_blank" href="https://twitter.com" class="footer-middle__social-link">
-              <img src="img/icons/twitter.svg" alt="icon:twitter" class="footer-middle__social-icon" />
+              <img src="./images/icons/twitter.svg" alt="icon:twitter" class="footer-middle__social-icon" />
             </a>
             <a target="_blank" href="https://youtube.com" class="footer-middle__social-link">
-              <img src="img/icons/yt.svg" alt="icon:youtube" class="footer-middle__social-icon" />
+              <img src="./images/icons/yt.svg" alt="icon:youtube" class="footer-middle__social-icon" />
             </a>
             <a target="_blank" href="https://instagram.com" class="footer-middle__social-link">
-              <img src="img/icons/inst.svg" alt="icon:instagram" class="footer-middle__social-icon" />
+              <img src="./images/icons/inst.svg" alt="icon:instagram" class="footer-middle__social-icon" />
             </a>
           </div>
           <!-- /.footer-middle__social -->
@@ -251,8 +251,69 @@
         <!-- /.footer-bottom -->
       </div>
       <!-- /.container -->
-      <a href="#" class="to-top" id="toTop"> <img src="img/icons/arrowup.png" alt="arrow" class="to-top__icon" /> </a>
+      <a href="#" class="to-top" id="toTop">
+        <img src="./images/icons/arrowup.png" alt="arrow" class="to-top__icon" />
+      </a>
     </footer>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal-overlay -->
+      <div class="modal__dialog">
+        <div class="modal__close" data-close="modal"></div>
+        <!-- /.modal-close -->
+        <h3 class="modal__title">Обратная связь</h3>
+        <form class="form modal__form" action="send.php" method="POST" novalidate>
+          <div class="modal-theme">
+            <h4 class="modal__subtitle">Тема</h4>
+            <div class="modal__form-item">
+              <select name="theme" class="modal-theme__select" required>
+                <option class="modal-theme__option modal-theme__option--heading" disabled selected>
+                  Выберите тему
+                </option>
+                <option value="Статьи" class="modal-theme__option">Статьи</option>
+                <option value="Новости" class="modal-theme__option">Новости</option>
+                <option value="Горячее" class="modal-theme__option">Горячее</option>
+                <option value="HTML" class="modal-theme__option">HTML</option>
+                <option value="CSS" class="modal-theme__option">CSS</option>
+                <option value="JavaScript" class="modal-theme__option">JavaScript</option>
+                <option value="Web Design" class="modal-theme__option">Web Design</option>
+              </select>
+            </div>
+            <img class="modal-theme__arrow" src="./images/modal/arrow.svg" alt="icon: arrow" />
+          </div>
+          <!-- /.modal-theme -->
+          <div class="modal-message">
+            <h4 class="modal__subtitle">Сообщение</h4>
+            <div class="modal__form-item">
+              <textarea class="modal-message__message" name="message" required></textarea>
+            </div>
+          </div>
+          <!-- /.modal-message -->
+          <div class="modal-email">
+            <h4 class="modal__subtitle">Email</h4>
+            <div class="modal__form-item">
+              <input type="email" class="modal-email__input" name="email" required />
+            </div>
+          </div>
+          <!-- /.modal-email -->
+          <div class="modal-checkbox">
+            <input
+              type="checkbox"
+              class="modal-checkbox__input modal-checkbox__input--hidden"
+              id="modal-checkbox__input"
+              name="checkbox"
+              required
+            />
+            <label for="modal-checkbox__input" class="modal-checkbox__label" id="modal-checkbox__label"></label>
+            <span class="modal-checkbox__info">Согласен с обработкой данных</span>
+          </div>
+          <!-- /.modal-checkbox -->
+          <button class="button modal__button" type="submit">Отправить</button>
+        </form>
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
     <script src="./scripts/jquery-3.6.0.min.js"></script>
     <script src="./scripts/jquery.validate.min.js"></script>
     <script src="./scripts/swiper-bundle.min.js"></script>

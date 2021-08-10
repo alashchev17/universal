@@ -478,7 +478,7 @@ label.invalid {
   color: #262D33;
   margin-bottom: 25px; }
 
-.modal-section__title {
+.modal__subtitle {
   font-weight: 900;
   font-size: 14px;
   line-height: 143%;
