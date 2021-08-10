@@ -2617,13 +2617,15 @@ label.invalid {
     font-size: 12px; }
     .footer-bottom__text {
       max-width: 550px; }
-  .main-news__wrapper {
-    padding: 35px 70px; }
-  .main-news__title {
-    font-size: 38px;
-    line-height: 50px; }
-  .main-news__bookmark {
-    top: 116px; }
+  .main-news {
+    padding-top: 74px; }
+    .main-news__wrapper {
+      padding: 35px 70px; }
+    .main-news__title {
+      font-size: 38px;
+      line-height: 50px; }
+    .main-news__bookmark {
+      top: 116px; }
   .hero-article__user {
     top: 0; }
   .hero-article__lead {
