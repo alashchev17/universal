@@ -3397,6 +3397,8 @@ label.invalid {
     .hero-article__repost-link:hover {
       background-color: #3863db;
       opacity: 0.9; }
+  .more-articles__title:hover {
+    text-decoration: underline; }
   .comments__add:hover::before, .comments__load-more:hover::before {
     opacity: 0.4; }
   .to-top:hover::before {
