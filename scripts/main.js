@@ -16,6 +16,7 @@ $(document).ready(function () {
   });
 
   mobileButton.on("click", function () {
+    $("body").toggleClass("overflow");
     mobileMenu.toggleClass("mobile-menu--active");
     mobileButton.toggleClass("mobile-button--active");
   });
