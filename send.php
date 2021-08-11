@@ -8,14 +8,14 @@ $theme = $_POST['theme'];
 $message = $_POST['message'];
 $comment = $_POST['comment'];
 
-if ($message === '' && $theme === '' && $comment === null && $email !== '') {
+if ($email != ''&& $message == '' && $theme == '') {
     $title = "Запрос на подписку - Universal";
     $body = "
     <h2>Новое обращение от пользователя.</h2>
     <b>$email</b> хочет подписаться на обновления новостного портала <b>Universal</b>
     ";
     header('location: subscribe.html');
-} else if ($message !== '' && $theme !== '' && $email !== '' && $comment === null) {
+} else if ($message != '' && $theme != '' && $email != '') {
     $title = "Новая заявка - Universal";
     $body = "
     <h2>Пользователь оставил заявку на сайте Universal.</h2>
