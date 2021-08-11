@@ -21,10 +21,6 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Universal - Запрос на подписку</title>
@@ -84,9 +80,9 @@
       <div class="container">
         <div class="footer__subscribe subscribe">
           <h2 class="subscribe__title">Подпишитесь на нашу рассылку</h2>
-          <form action="send.php" method="POST" class="subscribe__form form">
+          <form action="send.php" method="POST" class="subscribe__form form" novalidate="novalidate">
             <div class="subscribe__form-item">
-              <input name="email" type="email" class="subscribe__input" placeholder="Email" required />
+              <input name="email" type="email" class="subscribe__input" placeholder="Email" required="" />
             </div>
             <button type="submit" class="button subscribe__button">Подписаться</button>
           </form>
@@ -208,7 +204,7 @@
         <!-- /.footer-top -->
         <div class="footer-middle">
           <a href="#" class="footer-middle__logo">
-            <img src="./images/logo-small.svg" alt="logo" class="footer-middle__image" />
+            <img src="./images/logo-small.svg" loading="lazy" alt="logo" class="footer-middle__image" />
           </a>
           <ul class="footer-middle__navbar">
             <li class="footer-middle__item">
@@ -226,33 +222,51 @@
           </ul>
           <div class="footer-middle__social">
             <a target="_blank" href="https://www.facebook.com" class="footer-middle__social-link">
-              <img src="./images/icons/fb.svg" alt="icon:facebook" class="footer-middle__social-icon" />
+              <img src="./images/icons/fb.svg" loading="lazy" alt="icon:facebook" class="footer-middle__social-icon"
+              width="50"
+              height="50" />
             </a>
             <a target="_blank" href="https://twitter.com" class="footer-middle__social-link">
-              <img src="./images/icons/twitter.svg" alt="icon:twitter" class="footer-middle__social-icon" />
+              <img
+                src="./images/icons/twitter.svg"
+                loading="lazy"
+                alt="icon:twitter"
+                class="footer-middle__social-icon"
+                width="50"
+                height="50"
+              />
             </a>
             <a target="_blank" href="https://youtube.com" class="footer-middle__social-link">
-              <img src="./images/icons/yt.svg" alt="icon:youtube" class="footer-middle__social-icon" />
+              <img src="./images/icons/yt.svg" loading="lazy" alt="icon:youtube" class="footer-middle__social-icon"
+              width="50"
+              height="50" />
             </a>
             <a target="_blank" href="https://instagram.com" class="footer-middle__social-link">
-              <img src="./images/icons/inst.svg" alt="icon:instagram" class="footer-middle__social-icon" />
+              <img
+                src="./images/icons/inst.svg"
+                loading="lazy"
+                alt="icon:instagram"
+                class="footer-middle__social-icon"
+                width="50"
+                height="50"
+              />
             </a>
           </div>
           <!-- /.footer-middle__social -->
         </div>
         <!-- /.footer-middle -->
         <div class="footer-bottom">
-          <p class="footer-bottom__text">
+          <p class="footer-bottom__text" style="overflow-wrap: break-word">
             Universal - это онлайн издание, в котором мы публикуем полезные материалы о веб разработке: статьи, новости,
             видеоуроки, подборки, ссылки и курсы. Материалы на сайте бесплатны, но при копировании,указывайте ссылку.
           </p>
-          <span class="footer-bottom__rights">&#169; 2020 Univesal Magazine</span>
+          <span class="footer-bottom__rights">© 2020 Univesal Magazine</span>
         </div>
         <!-- /.footer-bottom -->
       </div>
       <!-- /.container -->
       <a href="#" class="to-top" id="toTop">
-        <img src="./images/icons/arrowup.png" alt="arrow" class="to-top__icon" />
+        <img src="./images/icons/arrowup.png" width="40" height="40" loading="lazy" alt="arrow" class="to-top__icon" />
       </a>
     </footer>
     <div class="modal">
@@ -314,9 +328,8 @@
       <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
-    <script src="./scripts/jquery-3.6.0.min.js"></script>
-    <script src="./scripts/jquery.validate.min.js"></script>
-    <script src="./scripts/swiper-bundle.min.js"></script>
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/jquery-3.6.0.min.js" async></script>
+    <script src="./scripts/jquery.validate.min.js" async></script>
+    <script src="./scripts/main.js" async></script>
   </body>
 </html>
